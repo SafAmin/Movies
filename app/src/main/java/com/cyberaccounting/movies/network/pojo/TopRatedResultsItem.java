@@ -3,219 +3,220 @@ package com.cyberaccounting.movies.network.pojo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
-import com.google.gson.annotations.SerializedName;
 
 public class TopRatedResultsItem implements Parcelable {
 
-	@SerializedName("overview")
-	private String overview;
+    @SerializedName("overview")
+    private String overview;
 
-	@SerializedName("original_language")
-	private String originalLanguage;
+    @SerializedName("original_language")
+    private String originalLanguage;
 
-	@SerializedName("original_title")
-	private String originalTitle;
+    @SerializedName("original_title")
+    private String originalTitle;
 
-	@SerializedName("video")
-	private boolean video;
+    @SerializedName("video")
+    private boolean video;
 
-	@SerializedName("title")
-	private String title;
+    @SerializedName("title")
+    private String title;
 
-	@SerializedName("genre_ids")
-	private List<Integer> genreIds;
+    @SerializedName("genre_ids")
+    private List<Integer> genreIds;
 
-	@SerializedName("poster_path")
-	private String posterPath;
+    @SerializedName("poster_path")
+    private String posterPath;
 
-	@SerializedName("backdrop_path")
-	private String backdropPath;
+    @SerializedName("backdrop_path")
+    private String backdropPath;
 
-	@SerializedName("release_date")
-	private String releaseDate;
+    @SerializedName("release_date")
+    private String releaseDate;
 
-	@SerializedName("vote_average")
-	private int voteAverage;
+    @SerializedName("vote_average")
+    private int voteAverage;
 
-	@SerializedName("popularity")
-	private double popularity;
+    @SerializedName("popularity")
+    private double popularity;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("adult")
-	private boolean adult;
+    @SerializedName("adult")
+    private boolean adult;
 
-	@SerializedName("vote_count")
-	private int voteCount;
+    @SerializedName("vote_count")
+    private int voteCount;
 
-	public void setOverview(String overview){
-		this.overview = overview;
-	}
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
 
-	public String getOverview(){
-		return overview;
-	}
+    public String getOverview() {
+        return overview;
+    }
 
-	public void setOriginalLanguage(String originalLanguage){
-		this.originalLanguage = originalLanguage;
-	}
+    public void setOriginalLanguage(String originalLanguage) {
+        this.originalLanguage = originalLanguage;
+    }
 
-	public String getOriginalLanguage(){
-		return originalLanguage;
-	}
+    public String getOriginalLanguage() {
+        return originalLanguage;
+    }
 
-	public void setOriginalTitle(String originalTitle){
-		this.originalTitle = originalTitle;
-	}
+    public void setOriginalTitle(String originalTitle) {
+        this.originalTitle = originalTitle;
+    }
 
-	public String getOriginalTitle(){
-		return originalTitle;
-	}
+    public String getOriginalTitle() {
+        return originalTitle;
+    }
 
-	public void setVideo(boolean video){
-		this.video = video;
-	}
+    public void setVideo(boolean video) {
+        this.video = video;
+    }
 
-	public boolean isVideo(){
-		return video;
-	}
+    public boolean isVideo() {
+        return video;
+    }
 
-	public void setTitle(String title){
-		this.title = title;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public String getTitle(){
-		return title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setGenreIds(List<Integer> genreIds){
-		this.genreIds = genreIds;
-	}
+    public void setGenreIds(List<Integer> genreIds) {
+        this.genreIds = genreIds;
+    }
 
-	public List<Integer> getGenreIds(){
-		return genreIds;
-	}
+    public List<Integer> getGenreIds() {
+        return genreIds;
+    }
 
-	public void setPosterPath(String posterPath){
-		this.posterPath = posterPath;
-	}
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
+    }
 
-	public String getPosterPath(){
-		return posterPath;
-	}
+    public String getPosterPath() {
+        return posterPath;
+    }
 
-	public void setBackdropPath(String backdropPath){
-		this.backdropPath = backdropPath;
-	}
+    public void setBackdropPath(String backdropPath) {
+        this.backdropPath = backdropPath;
+    }
 
-	public String getBackdropPath(){
-		return backdropPath;
-	}
+    public String getBackdropPath() {
+        return backdropPath;
+    }
 
-	public void setReleaseDate(String releaseDate){
-		this.releaseDate = releaseDate;
-	}
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+    }
 
-	public String getReleaseDate(){
-		return releaseDate;
-	}
+    public String getReleaseDate() {
+        return releaseDate;
+    }
 
-	public void setVoteAverage(int voteAverage){
-		this.voteAverage = voteAverage;
-	}
+    public void setVoteAverage(int voteAverage) {
+        this.voteAverage = voteAverage;
+    }
 
-	public int getVoteAverage(){
-		return voteAverage;
-	}
+    public int getVoteAverage() {
+        return voteAverage;
+    }
 
-	public void setPopularity(double popularity){
-		this.popularity = popularity;
-	}
+    public void setPopularity(double popularity) {
+        this.popularity = popularity;
+    }
 
-	public double getPopularity(){
-		return popularity;
-	}
+    public double getPopularity() {
+        return popularity;
+    }
 
-	public void setId(int id){
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setAdult(boolean adult){
-		this.adult = adult;
-	}
+    public void setAdult(boolean adult) {
+        this.adult = adult;
+    }
 
-	public boolean isAdult(){
-		return adult;
-	}
+    public boolean isAdult() {
+        return adult;
+    }
 
-	public void setVoteCount(int voteCount){
-		this.voteCount = voteCount;
-	}
+    public void setVoteCount(int voteCount) {
+        this.voteCount = voteCount;
+    }
 
-	public int getVoteCount(){
-		return voteCount;
-	}
+    public int getVoteCount() {
+        return voteCount;
+    }
 
-	@Override
-	public int describeContents() {
-		return 0;
-	}
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
-	@Override
-	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeString(this.overview);
-		dest.writeString(this.originalLanguage);
-		dest.writeString(this.originalTitle);
-		dest.writeByte(this.video ? (byte) 1 : (byte) 0);
-		dest.writeString(this.title);
-		dest.writeList(this.genreIds);
-		dest.writeString(this.posterPath);
-		dest.writeString(this.backdropPath);
-		dest.writeString(this.releaseDate);
-		dest.writeInt(this.voteAverage);
-		dest.writeDouble(this.popularity);
-		dest.writeInt(this.id);
-		dest.writeByte(this.adult ? (byte) 1 : (byte) 0);
-		dest.writeInt(this.voteCount);
-	}
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.overview);
+        dest.writeString(this.originalLanguage);
+        dest.writeString(this.originalTitle);
+        dest.writeByte(this.video ? (byte) 1 : (byte) 0);
+        dest.writeString(this.title);
+        dest.writeList(this.genreIds);
+        dest.writeString(this.posterPath);
+        dest.writeString(this.backdropPath);
+        dest.writeString(this.releaseDate);
+        dest.writeInt(this.voteAverage);
+        dest.writeDouble(this.popularity);
+        dest.writeInt(this.id);
+        dest.writeByte(this.adult ? (byte) 1 : (byte) 0);
+        dest.writeInt(this.voteCount);
+    }
 
-	public TopRatedResultsItem() {
-	}
+    public TopRatedResultsItem() {
+    }
 
-	protected TopRatedResultsItem(Parcel in) {
-		this.overview = in.readString();
-		this.originalLanguage = in.readString();
-		this.originalTitle = in.readString();
-		this.video = in.readByte() != 0;
-		this.title = in.readString();
-		this.genreIds = new ArrayList<Integer>();
-		in.readList(this.genreIds, Integer.class.getClassLoader());
-		this.posterPath = in.readString();
-		this.backdropPath = in.readString();
-		this.releaseDate = in.readString();
-		this.voteAverage = in.readInt();
-		this.popularity = in.readDouble();
-		this.id = in.readInt();
-		this.adult = in.readByte() != 0;
-		this.voteCount = in.readInt();
-	}
+    protected TopRatedResultsItem(Parcel in) {
+        this.overview = in.readString();
+        this.originalLanguage = in.readString();
+        this.originalTitle = in.readString();
+        this.video = in.readByte() != 0;
+        this.title = in.readString();
+        this.genreIds = new ArrayList<Integer>();
+        in.readList(this.genreIds, Integer.class.getClassLoader());
+        this.posterPath = in.readString();
+        this.backdropPath = in.readString();
+        this.releaseDate = in.readString();
+        this.voteAverage = in.readInt();
+        this.popularity = in.readDouble();
+        this.id = in.readInt();
+        this.adult = in.readByte() != 0;
+        this.voteCount = in.readInt();
+    }
 
-	public static final Parcelable.Creator<TopRatedResultsItem> CREATOR = new Parcelable.Creator<TopRatedResultsItem>() {
-		@Override
-		public TopRatedResultsItem createFromParcel(Parcel source) {
-			return new TopRatedResultsItem(source);
-		}
+    public static final Parcelable.Creator<TopRatedResultsItem> CREATOR = new Parcelable.Creator<TopRatedResultsItem>() {
+        @Override
+        public TopRatedResultsItem createFromParcel(Parcel source) {
+            return new TopRatedResultsItem(source);
+        }
 
-		@Override
-		public TopRatedResultsItem[] newArray(int size) {
-			return new TopRatedResultsItem[size];
-		}
-	};
+        @Override
+        public TopRatedResultsItem[] newArray(int size) {
+            return new TopRatedResultsItem[size];
+        }
+    };
 }

@@ -3,89 +3,90 @@ package com.cyberaccounting.movies.network.pojo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
-import com.google.gson.annotations.SerializedName;
 
 public class TopRatedResponse implements Parcelable {
 
-	@SerializedName("page")
-	private int page;
+    @SerializedName("page")
+    private int page;
 
-	@SerializedName("total_pages")
-	private int totalPages;
+    @SerializedName("total_pages")
+    private int totalPages;
 
-	@SerializedName("results")
-	private List<TopRatedResultsItem> results;
+    @SerializedName("results")
+    private List<TopRatedResultsItem> results;
 
-	@SerializedName("total_results")
-	private int totalResults;
+    @SerializedName("total_results")
+    private int totalResults;
 
-	public void setPage(int page){
-		this.page = page;
-	}
+    public void setPage(int page) {
+        this.page = page;
+    }
 
-	public int getPage(){
-		return page;
-	}
+    public int getPage() {
+        return page;
+    }
 
-	public void setTotalPages(int totalPages){
-		this.totalPages = totalPages;
-	}
+    public void setTotalPages(int totalPages) {
+        this.totalPages = totalPages;
+    }
 
-	public int getTotalPages(){
-		return totalPages;
-	}
+    public int getTotalPages() {
+        return totalPages;
+    }
 
-	public void setResults(List<TopRatedResultsItem> results){
-		this.results = results;
-	}
+    public void setResults(List<TopRatedResultsItem> results) {
+        this.results = results;
+    }
 
-	public List<TopRatedResultsItem> getResults(){
-		return results;
-	}
+    public List<TopRatedResultsItem> getResults() {
+        return results;
+    }
 
-	public void setTotalResults(int totalResults){
-		this.totalResults = totalResults;
-	}
+    public void setTotalResults(int totalResults) {
+        this.totalResults = totalResults;
+    }
 
-	public int getTotalResults(){
-		return totalResults;
-	}
+    public int getTotalResults() {
+        return totalResults;
+    }
 
-	@Override
-	public int describeContents() {
-		return 0;
-	}
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
-	@Override
-	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeInt(this.page);
-		dest.writeInt(this.totalPages);
-		dest.writeList(this.results);
-		dest.writeInt(this.totalResults);
-	}
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.page);
+        dest.writeInt(this.totalPages);
+        dest.writeList(this.results);
+        dest.writeInt(this.totalResults);
+    }
 
-	public TopRatedResponse() {
-	}
+    public TopRatedResponse() {
+    }
 
-	protected TopRatedResponse(Parcel in) {
-		this.page = in.readInt();
-		this.totalPages = in.readInt();
-		this.results = new ArrayList<TopRatedResultsItem>();
-		in.readList(this.results, TopRatedResultsItem.class.getClassLoader());
-		this.totalResults = in.readInt();
-	}
+    protected TopRatedResponse(Parcel in) {
+        this.page = in.readInt();
+        this.totalPages = in.readInt();
+        this.results = new ArrayList<TopRatedResultsItem>();
+        in.readList(this.results, TopRatedResultsItem.class.getClassLoader());
+        this.totalResults = in.readInt();
+    }
 
-	public static final Parcelable.Creator<TopRatedResponse> CREATOR = new Parcelable.Creator<TopRatedResponse>() {
-		@Override
-		public TopRatedResponse createFromParcel(Parcel source) {
-			return new TopRatedResponse(source);
-		}
+    public static final Parcelable.Creator<TopRatedResponse> CREATOR = new Parcelable.Creator<TopRatedResponse>() {
+        @Override
+        public TopRatedResponse createFromParcel(Parcel source) {
+            return new TopRatedResponse(source);
+        }
 
-		@Override
-		public TopRatedResponse[] newArray(int size) {
-			return new TopRatedResponse[size];
-		}
-	};
+        @Override
+        public TopRatedResponse[] newArray(int size) {
+            return new TopRatedResponse[size];
+        }
+    };
 }
