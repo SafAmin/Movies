@@ -3,6 +3,9 @@ package com.cyberaccounting.movies.network.pojo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MovieDetails implements Parcelable {
 
     private int movieId;
@@ -98,4 +101,30 @@ public class MovieDetails implements Parcelable {
             return new MovieDetails[size];
         }
     };
+
+    /**
+     * This method responsible for map API response to view model of type {@link MovieDetails} which used to
+     * invalidate views with data.
+     *
+     * @param popularMovies API response
+     */
+    public List<MovieDetails> generatePopularMoviesDataList(PopularResponse popularMovies) {
+        List<MovieDetails> movieDetailsList = new ArrayList<>();
+        MovieDetails movieDetails;
+        PopularResultsItem popularResultsItem;
+
+        for (int i = 0; i < popularMovies.getResults().size(); i++) {
+            popularResultsItem = popularMovies.getResults().get(i);
+            movieDetails = new MovieDetails();
+            movieDetails.setMovieId(popularResultsItem.getId());
+            movieDetails.setMoviePoster(popularResultsItem.getPosterPath());
+            movieDetails.setMovieName(popularResultsItem.getOriginalTitle());
+            movieDetails.setMovieReleaseDate(popularResultsItem.getReleaseDate());
+            movieDetails.setMovieRating(String.valueOf(popularResultsItem.getVoteAverage()));
+            movieDetails.setMovieOverview(popularResultsItem.getOverview());
+            movieDetailsList.add(i, movieDetails);
+        }
+
+        return movieDetailsList;
+    }
 }

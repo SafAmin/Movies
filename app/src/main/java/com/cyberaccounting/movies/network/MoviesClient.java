@@ -1,5 +1,7 @@
 package com.cyberaccounting.movies.network;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -22,8 +24,9 @@ public class MoviesClient {
         if (retrofit == null) {
             synchronized (LOCK) {
                 retrofit = new retrofit2.Retrofit.Builder()
-                        .baseUrl(BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
+                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                        .baseUrl(BASE_URL)
                         .client(httpClient.build())
                         .build();
             }

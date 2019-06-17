@@ -29,7 +29,12 @@ ext {
     butterknifeVersion = '8.8.1'
     glideVersion = '4.9.0'
     retrofitVersion = '2.3.0'
-    loggingInterceptorVersion = '3.10.0'
+    loggingInterceptorVersion = '3.4.1'
+    rxandroidVersion = '2.0.2'
+    rxjavaVersion = '2.1.13'
+    adapterrxjavaVersion = '2.4.0'
+    retrofit2rxjava2adapterVersion = "1.0.0"
+    gsonVersion = '2.8.2'
     roomVersion = '1.1.1'
 }
 
@@ -48,15 +53,26 @@ dependencies {
     implementation "com.jakewharton:butterknife:${butterknifeVersion}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
 
-    //Glide
+    // Glide
     implementation "com.github.bumptech.glide:glide:${glideVersion}"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:${rxjavaVersion}"
+
+    // RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}"
 
     // Retrofit 2 HTTP client for Android
     implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
     implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
     implementation "com.squareup.okhttp3:logging-interceptor:${loggingInterceptorVersion}"
+    implementation "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofit2rxjava2adapterVersion}"
 
-    //Room
+    // GSON body parser
+    implementation "com.google.code.gson:gson:${gsonVersion}"
+
+    // Room
     implementation "android.arch.persistence.room:runtime:${roomVersion}"
     annotationProcessor "android.arch.persistence.room:compiler:${roomVersion}"
     implementation "android.arch.lifecycle:extensions:${roomVersion}"

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.cyberaccounting.movies.R;
+import com.cyberaccounting.movies.posters.PostersFragment;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -14,6 +15,8 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+
+        invalidateView(PostersFragment.newInstance());
     }
 
     public void invalidateView(Fragment fragment) {
