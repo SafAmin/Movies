@@ -117,11 +117,15 @@ public class PostersFragment extends BaseFragment implements PostersView,
     }
 
     @Override
-    public void invalidateViewWithPopularMovies(List<MovieDetails> movieDetailsList) {
-        if (adapter == null) {
+    public void invalidateViewWithMovies(List<MovieDetails> movieDetailsList) {
+
             adapter = new PostersAdapter(getContext(), movieDetailsList);
-        }
+
         rvMoviesPosters.setAdapter(adapter);
+    }
+
+    @Override
+    public void invalidateViewWithMoreMovies(List<MovieDetails> movieDetailsList) {
         if (currentPage != PAGE_START) adapter.removeLoading();
         adapter.addAll(movieDetailsList);
         swipeRefresh.setRefreshing(false);

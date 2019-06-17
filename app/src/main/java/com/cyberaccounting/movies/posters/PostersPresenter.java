@@ -75,7 +75,10 @@ public class PostersPresenter extends BasePresenter<PostersView> {
 
     private void mapPopularMoviesToMovieDetailModel(PopularResponse popularMovies) {
         List<MovieDetails> movieDetailsList = new MovieDetails().generatePopularMoviesDataList(popularMovies);
-        getView().invalidateViewWithPopularMovies(movieDetailsList);
+        if(pageNum == 1)
+        getView().invalidateViewWithMovies(movieDetailsList);
+        else
+            getView().invalidateViewWithMoreMovies(movieDetailsList);
     }
 
 }

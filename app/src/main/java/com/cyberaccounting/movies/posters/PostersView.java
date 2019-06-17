@@ -12,5 +12,8 @@ public interface PostersView extends BaseView {
 
     void setTotalPagesNum(int totalPages);
 
-    void invalidateViewWithPopularMovies(List<MovieDetails> movieDetailsList);
+    void invalidateViewWithMovies(List<MovieDetails> movieDetailsList);
+
+    void invalidateViewWithMoreMovies(List<MovieDetails> movieDetailsList);
+
 }
